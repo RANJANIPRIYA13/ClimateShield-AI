@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+/* Leaflet Dark Theme Overrides */
+.leaflet-container {
+  background-color: #0b0f19 !important;
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  background: rgba(15, 23, 42, 0.95) !important;
+  color: #f3f4f6 !important;
+  border: 1px solid rgba(55, 65, 81, 0.8) !important;
+  border-radius: 12px !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+.leaflet-popup-tip {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border: 1px solid rgba(55, 65, 81, 0.8) !important;
+}
+
+:root {
+  --background: #0b0f19;
+  --foreground: #f3f4f6;
+  --eoc-card-bg: rgba(17, 24, 39, 0.7);
+  --eoc-border: rgba(55, 65, 81, 0.6);
+  --eoc-accent-teal: #14b8a6;
+  --eoc-red: #ef4444;
+  --eoc-amber: #f59e0b;
+  --eoc-cyan: #06b6d4;
+  --eoc-emerald: #10b981;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Tactical Background Grid pattern */
+.bg-tactical-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 0%, rgba(20, 184, 166, 0.15), transparent 70%);
+}
+
+/* Radar Scan Line Animation */
+@keyframes radar-scan {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar-scan {
+  animation: radar-scan 8s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes live-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.95);
+  }
+}
+
+.animate-live-pulse {
+  animation: live-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom Scrollbar for EOC panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.8);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(20, 184, 166, 0.6);
+}
