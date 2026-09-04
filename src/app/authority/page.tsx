@@ -28,6 +28,7 @@ import {
 import { MapContainer } from '@/components/ui/MapContainer';
 import { RescueIncidentEntity, CitizenReportEntity, ShelterEntity, HospitalEntity, RoadEntity } from '@/lib/db/types';
 import { calculateRescuePriority } from '@/lib/ai/rescuePriorityEngine';
+import { ResilienceStatusPanel } from '@/components/ui/ResilienceStatusPanel';
 import { CHENNAI_EMERGENCY_RESOURCES } from '@/lib/db/resourceData';
 
 export default function AuthorityDashboard() {
@@ -239,7 +240,10 @@ export default function AuthorityDashboard() {
         </div>
       )}
 
-      {/* Top 6 EOC Operations KPIs */}
+      {/* System Resilience & Multi-Channel Telemetry Matrix */}
+      <ResilienceStatusPanel compact={true} />
+
+      {/* Top 6 EOC Key Performance Indicators (KPIs) Grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
         {/* 1. Critical Zones */}
         <div className="rounded-xl border border-red-500/40 bg-slate-900/80 p-4 backdrop-blur-md">

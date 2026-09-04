@@ -16,9 +16,9 @@ export default function PlatformGateway() {
         <div className="absolute bottom-0 left-0 -mb-12 -ml-12 h-96 w-96 rounded-full bg-teal-500/10 blur-3xl pointer-events-none" />
 
         <div className="relative z-10 space-y-4 max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3.5 py-1 text-xs font-mono font-semibold text-cyan-300">
-            <Cpu className="h-3.5 w-3.5 text-cyan-400" />
-            <span>PHASE 1 FOUNDATION READY</span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/40 bg-cyan-500/10 px-3.5 py-1 text-xs font-mono font-bold text-cyan-300">
+            <Cpu className="h-3.5 w-3.5 text-cyan-400 animate-pulse" />
+            <span>CLIMATESHIELD AI • LIVE INTELLIGENCE</span>
           </div>
 
           <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">

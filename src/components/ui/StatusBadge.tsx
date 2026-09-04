@@ -22,6 +22,37 @@ export const StatusBadge: React.FC<StatusBadgeProps> = ({
 }) => {
   const getBadgeStyle = (statusVal: string) => {
     switch (statusVal) {
+      case 'LIVE':
+        return {
+          bg: 'bg-emerald-500/10 border-emerald-500/40 text-emerald-400 font-mono font-bold',
+          dot: 'bg-emerald-400',
+          glow: 'shadow-[0_0_8px_rgba(16,185,129,0.3)]'
+        };
+      case 'SIMULATED':
+      case 'DEMO':
+        return {
+          bg: 'bg-purple-500/10 border-purple-500/40 text-purple-300 font-mono font-semibold',
+          dot: 'bg-purple-400',
+          glow: 'shadow-[0_0_8px_rgba(168,85,247,0.2)]'
+        };
+      case 'CITIZEN REPORT':
+        return {
+          bg: 'bg-amber-500/10 border-amber-500/40 text-amber-300 font-mono font-semibold',
+          dot: 'bg-amber-400',
+          glow: 'shadow-[0_0_8px_rgba(245,158,11,0.2)]'
+        };
+      case 'OFFICIAL':
+        return {
+          bg: 'bg-blue-500/10 border-blue-500/40 text-blue-300 font-mono font-semibold',
+          dot: 'bg-blue-400',
+          glow: 'shadow-[0_0_8px_rgba(59,130,246,0.2)]'
+        };
+      case 'AI PREDICTION':
+        return {
+          bg: 'bg-cyan-500/10 border-cyan-500/40 text-cyan-300 font-mono font-bold',
+          dot: 'bg-cyan-400',
+          glow: 'shadow-[0_0_8px_rgba(6,182,212,0.3)]'
+        };
       case 'Critical':
       case 'Depleted':
       case 'Full':

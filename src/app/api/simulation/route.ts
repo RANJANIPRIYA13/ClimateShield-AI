@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const scenario: SimulationScenario = body.scenario || 'NORMAL';
 
-    const result = triggerSimulationScenario(scenario);
+    const result = await triggerSimulationScenario(scenario);
 
     return successResponse(result, `Simulation scenario '${scenario}' executed successfully`);
   } catch (err: any) {

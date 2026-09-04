@@ -28,6 +28,7 @@ import { ShelterCard } from '@/components/ui/ShelterCard';
 import { AlertCard } from '@/components/ui/AlertCard';
 import { ResourceFinder } from '@/components/gis/ResourceFinder';
 import { calculateSafeRoutes, RouteCalculationResult, RouteOption } from '@/lib/ai/routeEngine';
+import { ResilienceStatusPanel } from '@/components/ui/ResilienceStatusPanel';
 import { ShelterEntity, HospitalEntity, RoadEntity, AlertEntity, CitizenReportEntity } from '@/lib/db/types';
 
 export default function CitizenDashboard() {
@@ -234,6 +235,9 @@ export default function CitizenDashboard() {
           </p>
         </div>
       )}
+
+      {/* Resilience Channel Status Matrix */}
+      <ResilienceStatusPanel compact={true} />
 
       {/* Sub-Section Navigation Tabs */}
       <div className="flex items-center rounded-xl border border-slate-800 bg-slate-900/90 p-1.5 text-xs font-semibold overflow-x-auto">
